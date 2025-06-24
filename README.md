@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![KemetPass Logo](https://raw.githubusercontent.com/mohamedgobaraa/KemetPass-website/main/backend/assets/logo.png)
+<img src="https://raw.githubusercontent.com/mohamedgobaraa/KemetPass-website/main/backend/assets/logo.png" alt="KemetPass Logo" width="300" height="300">
 
 <!-- Animated badges -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=600&lines=Discover+Ancient+Egypt;Experience+AR+Tourism;Learn+Hieroglyphics;Explore+Historical+Sites)](https://git.io/typing-svg)
