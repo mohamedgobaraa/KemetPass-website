@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![KemetPass Logo](https://via.placeholder.com/300x100/FFD700/8B4513?text=KemetPass)
+![KemetPass Logo]([https://via.placeholder.com/300x100/FFD700/8B4513?text=KemetPass](https://github.com/mohamedgobaraa/KemetPass-website/blob/main/backend/assets/logo.png))
 
 <!-- Animated badges -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&width=600&lines=Discover+Ancient+Egypt;Experience+AR+Tourism;Learn+Hieroglyphics;Explore+Historical+Sites)](https://git.io/typing-svg)
@@ -274,7 +274,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### 📞 Contact & Support
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mohamedgobaraa@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:eng.mohamed.gobara@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohamedgobaraa/KemetPass-website)
 [![Documentation](https://img.shields.io/badge/Docs-000000?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/mohamedgobaraa/KemetPass-website#readme)
 
