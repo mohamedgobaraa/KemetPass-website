@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Golden Paws - Kemet Pass</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      :root {
+        --kemet-dark: #1a1a1a;
+        --kemet-medium: #4a4a4a;
+        --kemet-light: #f5f5f5;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, var(--kemet-dark), var(--kemet-medium));
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .game-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .game-header {
+        margin-top: 100px;
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--kemet-light);
+      }
+
+      .game-header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, var(--kemet-light), #a8a8a8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .game-header p {
+        font-size: 1.1rem;
+        margin: 0;
+        opacity: 0.8;
+      }
+
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: var(--kemet-light);
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+      }
+
+      .back-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(-5px);
+      }
+
+      .back-button svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      #unity-container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1600px;
+      }
+
+      #unity-canvas {
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        width: 100% !important;
+        height: auto !important;
+        max-width: 1600px;
+      }
+
+      #unity-loading-bar {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      #unity-progress-bar-empty {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        height: 8px;
+      }
+
+      #unity-progress-bar-full {
+        background: linear-gradient(90deg, var(--kemet-medium), var(--kemet-dark));
+        border-radius: 4px;
+        height: 8px;
+        transition: width 0.3s ease;
+      }
+
+      #unity-footer {
+        background: transparent;
+        padding: 10px 0;
+      }
+
+      #unity-fullscreen-button {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        padding: 8px;
+        transition: background 0.3s ease;
+      }
+
+      #unity-fullscreen-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      #unity-build-title {
+        color: var(--kemet-light);
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      #unity-warning {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      #unity-warning div {
+        color: var(--kemet-light);
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .game-container {
+          padding: 10px;
+        }
+
+        .game-header h1 {
+          font-size: 2rem;
+        }
+
+        .game-header p {
+          font-size: 1rem;
+        }
+
+        .back-button {
+          top: 10px;
+          left: 10px;
+          padding: 8px 16px;
+          font-size: 0.9rem;
+        }
+
+        #unity-container {
+          padding: 10px;
+          margin: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://localhost:8080/" class="back-button">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Back to Home
+    </a>
+
+    <div class="game-container">
+      <div class="game-header">
+        <h1>Golden Paws</h1>
+        <p>Experience the ancient Egyptian world through the eyes of a loyal companion</p>
+      </div>
+
+      <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas" width=1600 height=900 tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
+        </div>
+        <div id="unity-warning"> </div>
+        <div id="unity-footer">
+          <div id="unity-webgl-logo"></div>
+          <div id="unity-fullscreen-button"></div>
+          <div id="unity-build-title">Golden Paws - Kemet Pass</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: rgba(255, 0, 0, 0.2); padding: 10px; border-radius: 4px;';
+        else {
+          if (type == 'warning') div.style = 'background: rgba(255, 255, 0, 0.2); padding: 10px; border-radius: 4px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/GoldenPaws.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/GoldenPaws.data",
+        frameworkUrl: buildUrl + "/GoldenPaws.framework.js",
+        codeUrl: buildUrl + "/GoldenPaws.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Kemet Pass",
+        productName: "Golden Paws",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+      } else {
+        canvas.style.width = "100%";
+        canvas.style.height = "auto";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

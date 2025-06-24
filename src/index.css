@@ -1,0 +1,152 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 74% 98%;
+    --foreground: 36 95% 15%;
+
+    --card: 60 74% 98%;
+    --card-foreground: 36 95% 15%;
+
+    --popover: 60 74% 98%;
+    --popover-foreground: 36 95% 15%;
+
+    --primary: 28 100% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 100% 83%;
+    --secondary-foreground: 36 95% 15%;
+
+    --muted: 42 70% 95%;
+    --muted-foreground: 36 40% 40%;
+
+    --accent: 36 100% 74%;
+    --accent-foreground: 36 95% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 70% 85%;
+    --input: 36 70% 85%;
+    --ring: 28 100% 58%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-kemet-lightest/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-kemet-medium rounded-full;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-kemet-dark;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delayed-1 {
+  animation-delay: 0.2s;
+}
+
+.delayed-2 {
+  animation-delay: 0.4s;
+}
+
+.delayed-3 {
+  animation-delay: 0.6s;
+}
+
+/* Hero section gradient overlay */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+/* Feature card hover effect */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography utility classes */
+.heading-xl {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+
+.heading-md {
+  @apply text-2xl md:text-3xl font-bold;
+}
+
+.heading-sm {
+  @apply text-xl md:text-2xl font-bold;
+}
+
+.paragraph {
+  @apply text-base leading-relaxed;
+}

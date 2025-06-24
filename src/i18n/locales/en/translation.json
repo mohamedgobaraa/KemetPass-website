@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "title": "Discover the Magic of Ancient Egypt",
+    "subtitle": "Your journey through time begins here",
+    "searchPlaceholder": "Search historical sites, museums, or experiences...",
+    "exploreButton": "Explore",
+    "featuredDestinations": "Featured Destinations",
+    "viewAll": "View All",
+    "startJourney": "Start Your Journey",
+    "tryAR": "Try AR Experience",
+    "game": "Game"
+  },
+  "destinations": {
+    "title": "Explore Ancient Egypt",
+    "subtitle": "Discover the wonders of ancient Egyptian civilization through our curated collection of historical sites and attractions",
+    "reviews": "reviews",
+    "locations": {
+      "giza": "Giza, Egypt",
+      "luxor": "Luxor, Egypt",
+      "cairo": "Cairo, Egypt",
+      "aswan": "Aswan, Egypt"
+    },
+    "tags": {
+      "topAttraction": "Top Attraction",
+      "historicalSite": "Historical Site",
+      "museum": "Museum",
+      "ancientTemple": "Ancient Temple"
+    },
+    "places": {
+      "pyramids": "Pyramids of Giza",
+      "luxorTemple": "Luxor Temple",
+      "egyptianMuseum": "Egyptian Museum",
+      "valleyOfKings": "Valley of the Kings",
+      "abuSimbel": "Abu Simbel Temples",
+      "karnakTemple": "Karnak Temple"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "chatbot": "Chatbot",
+    "arExperience": "AR Experience",
+    "explore": "Explore",
+    "hieroglyphic": "Hieroglyphic",
+    "weather": "Weather",
+    "login": "Login",
+    "signup": "Sign Up",
+    "whereAmI": "Where Am I?",
+    "whoAmI": "Who Am I?",
+    "knowMe": "Know Me"
+  },
+  "footer": {
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 Kemet Pass. All rights reserved."
+  },
+  "chatbot": {
+    "title": "Chat with Ancient Egypt",
+    "subtitle": "Ask questions about ancient Egyptian history, culture, and civilization",
+    "placeholder": "Type your question here...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "error": "Something went wrong. Please try again."
+  },
+  "arExperience": {
+    "title": "AR Experience",
+    "subtitle": "Explore ancient Egyptian artifacts in augmented reality",
+    "start": "Start AR Experience",
+    "scan": "Scan QR Code",
+    "instructions": "Point your camera at the QR code to start the AR experience"
+  },
+  "whereAmI": {
+    "title": "Where Am I?",
+    "subtitle": "Discover your location in ancient Egypt",
+    "loading": "Loading location...",
+    "error": "Could not determine your location"
+  },
+  "whoAmI": {
+    "title": "Who Am I?",
+    "subtitle": "Learn about ancient Egyptian pharaohs and their stories",
+    "search": "Search for a pharaoh...",
+    "loading": "Loading information..."
+  },
+  "knowMe": {
+    "title": "Know Me",
+    "subtitle": "Test your knowledge about ancient Egypt",
+    "start": "Start Quiz",
+    "next": "Next Question",
+    "finish": "Finish Quiz",
+    "score": "Your Score"
+  },
+  "hieroglyphic": {
+    "title": "Hieroglyphic Translator",
+    "subtitle": "Translate modern text to ancient Egyptian hieroglyphs",
+    "input": "Enter text to translate",
+    "translate": "Translate",
+    "result": "Hieroglyphic Translation"
+  },
+  "weather": {
+    "title": "Weather in Ancient Egypt",
+    "subtitle": "Check weather conditions at historical sites",
+    "location": "Select Location",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "wind": "Wind Speed"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "forgot": "Forgot Password?",
+    "submit": "Sign In",
+    "noAccount": "Don't have an account?",
+    "signup": "Sign Up"
+  },
+  "signup": {
+    "title": "Create Account",
+    "subtitle": "Join our community of Egypt enthusiasts",
+    "name": "Full Name",
+    "email": "Email",
+    "password": "Password",
+    "confirm": "Confirm Password",
+    "submit": "Create Account",
+    "haveAccount": "Already have an account?",
+    "login": "Sign In"
+  },
+  "profile": {
+    "title": "My Profile",
+    "edit": "Edit Profile",
+    "name": "Name",
+    "email": "Email",
+    "bio": "Bio",
+    "save": "Save Changes",
+    "cancel": "Cancel"
+  }
+} 
